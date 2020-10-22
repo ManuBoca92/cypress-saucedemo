@@ -1,1 +1,5 @@
-{}
+{
+  "baseUrl": "https://www.saucedemo.com",
+  "viewportWidth": 1500,
+  "viewportHeight": 1200
+}
