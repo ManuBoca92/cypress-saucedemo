@@ -1,0 +1,22 @@
+{
+  "name": "cypress-swaglabs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManuBoca92/cypress-swaglabs.git"
+  },
+  "author": "Ebonom Mfam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManuBoca92/cypress-swaglabs/issues"
+  },
+  "homepage": "https://github.com/ManuBoca92/cypress-swaglabs#readme",
+  "devDependencies": {
+    "cypress": "^5.4.0"
+  }
+}
