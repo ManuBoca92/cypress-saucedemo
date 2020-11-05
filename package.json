@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
-    "cypress:open": "yarn run cypress open"
+    "open": "cypress open",
+    "lint": "eslint ./**/*.js",
+    "lint-cypress": "eslint --fix . && echo 'Lint complete.'"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,11 @@
   },
   "homepage": "https://github.com/ManuBoca92/cypress-swaglabs#readme",
   "devDependencies": {
-    "cypress": "^5.4.0"
+    "cypress": "^5.4.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier-eslint": "^11.0.0"
   }
 }
