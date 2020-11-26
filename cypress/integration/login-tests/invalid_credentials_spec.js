@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import LoginPage from '../pageObjects/LoginPage'
+import LoginPage from '../../pageObjects/LoginPage'
 
 before('Visits saucedemo website.', () => {
   cy.visit('/index.html')

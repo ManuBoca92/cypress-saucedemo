@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import LoginPage from '../pageObjects/LoginPage'
+import LoginPage from '../../pageObjects/LoginPage'
 
 describe('Login with valid credentials', () => {
   before('Visits saucedemo website.', () => {

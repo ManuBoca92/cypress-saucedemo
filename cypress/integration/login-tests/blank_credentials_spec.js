@@ -1,12 +1,11 @@
 /// <reference types="cypress" />
 
-import LoginPage from '../pageObjects/LoginPage'
-
-before('Visits saucedemo website.', () => {
-  cy.visit('/index.html')
-})
+import LoginPage from '../../pageObjects/LoginPage'
 
 describe('Login test with blank username and password', () => {
+  before('Visits saucedemo website.', () => {
+    cy.visit('/index.html')
+  })
   it('should click on login button.', () => {
     LoginPage.submitForm()
   })
