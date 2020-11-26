@@ -1,23 +1,19 @@
 /// <reference types="cypress" />
+import LoginPage from '../../pageObjects/LoginPage'
 
-describe('User login tests with valid credentials', () => {
-  it('Visits swag labs website.', () => {
+describe('Login with valid credentials', () => {
+  before('Visits saucedemo website.', () => {
     cy.visit('/index.html')
   })
-
-  it('Types in users username.', () => {
-    cy.get('[data-test="username"]').type('standard_user')
+  it('Should fill login form.', () => {
+    LoginPage.fillForm('standard_user', 'secret_sauce')
   })
 
-  it('Types in users password.', () => {
-    cy.get('[data-test="password"]').type('secret_sauce')
+  it('Should submit login form.', () => {
+    LoginPage.submitForm()
   })
 
-  it('Clicks on login button.', () => {
-    cy.get('#login-button').click()
-  })
-
-  it('Checks user is logged in and is on inventory page.', () => {
+  it('Should check user is logged in and redirected inventory page.', () => {
     cy.url().should('includes', '/inventory.html')
   })
 })
