@@ -1,23 +1,24 @@
 import { USERNAME, PASSWORD, LOGIN_BUTTON } from '../identifiers/loginPage'
 
 class LoginPage {
-  getUsername() {
+  get inputUsername() {
     return cy.get(USERNAME)
   }
-  getPassword() {
+  get inputPassword() {
     return cy.get(PASSWORD)
   }
-  getLogingButton() {
+  get logingButton() {
     return cy.get(LOGIN_BUTTON)
   }
 
   fillForm(username, password) {
-    this.getUsername().clear().type(username)
-    this.getPassword().clear().type(password)
+    this.inputUsername.clear().type(username)
+    this.inputPassword.clear().type(password)
+    return this
   }
 
   submitForm() {
-    this.getLogingButton().click()
+    this.logingButton.click()
   }
 }
 
