@@ -1,4 +1,23 @@
-{
-  "username": "standard_user",
-  "password": "secret_sauce"
-}
+[
+  {
+    "credential" : "valid credential",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "url": "/inventory.html",
+    "errorMessage": false
+  },
+  {
+    "credential" : "incorrect email address",
+    "username": "test",
+    "password": "secret_sauce",
+    "url": "/",
+    "errorMessage": true
+  },
+  {
+    "credential" : "incorrect password",
+    "username": "standard_user",
+    "password": "public_sauce",
+    "url": "/",
+    "errorMessage": true
+  }
+]
