@@ -29,8 +29,8 @@ import InventoryPage from '../pageObjects/InventoryPage'
 Cypress.Commands.add('login', () => {
   cy.fixture('user').then((userData) => {
     cy.visit('https://www.saucedemo.com/index.html')
-    cy.get('[data-test="username"]').type(userData.username)
-    cy.get('[data-test="password"]').type(userData.password)
+    cy.get('[data-test="username"]').type(userData[0].username)
+    cy.get('[data-test="password"]').type(userData[0].password)
   })
   cy.get('#login-button').click()
 })
