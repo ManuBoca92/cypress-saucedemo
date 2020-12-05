@@ -1,24 +1,22 @@
 /// <reference types="cypress" />
 import LoginPage from '../pageObjects/LoginPage'
+const userData = require('../fixtures/user.json')
 
-describe('User login tests', () => {
-  beforeEach('Visits saucedemo website.', () => {
+describe('User login tests', function () {
+  beforeEach('Visits saucedemo website.', function () {
     cy.visit('/index.html')
   })
-  it('Login with valid credentials successfully', () => {
-    LoginPage.fillForm('standard_user', 'secret_sauce').submitForm()
-    cy.url().should('includes', '/inventory.html')
+  userData.forEach((data) => {
+    it(`Login with ${data.credential} successfully`, function () {
+      LoginPage.fillForm(data.username, data.password).submitForm()
+      cy.url().should('includes', data.url)
+      data.errorMessage
+        ? cy.get('[data-test="error"]').should('be.visible')
+        : false
+    })
   })
   it('Login with blank username and password', () => {
     LoginPage.submitForm()
-    cy.get('[data-test="error"]').should('be.visible')
-  })
-  it('Login with invalid username and valid password', () => {
-    LoginPage.fillForm('test', 'secret_sauce').submitForm()
-    cy.get('[data-test="error"]').should('be.visible')
-  })
-  it('Login with valid username and invalid password', () => {
-    LoginPage.fillForm('standard_user', 'public_sauce').submitForm()
     cy.get('[data-test="error"]').should('be.visible')
   })
 })
