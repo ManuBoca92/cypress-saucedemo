@@ -10,9 +10,9 @@ describe('User login tests', function () {
     it(`Login with ${data.credential} successfully`, function () {
       LoginPage.fillForm(data.username, data.password).submitForm()
       cy.url().should('includes', data.url)
-      data.errorMessage
-        ? cy.get('[data-test="error"]').should('be.visible')
-        : false
+      if (data.errorMessage) {
+        cy.get('[data-test="error"]').should('be.visible')
+      }
     })
   })
   it('Login with blank username and password', () => {
