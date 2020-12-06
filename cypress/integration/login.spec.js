@@ -7,7 +7,7 @@ describe('User login tests', function () {
     cy.visit('/index.html')
   })
   userData.forEach((data) => {
-    it(`Login with ${data.credential} successfully`, function () {
+    it(`Login with ${data.credential}`, function () {
       LoginPage.fillForm(data.username, data.password).submitForm()
       cy.url().should('includes', data.url)
       if (data.errorMessage) {
