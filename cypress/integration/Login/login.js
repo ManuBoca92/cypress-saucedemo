@@ -18,7 +18,7 @@ Then('I should be redirected to the correct {string} page', (url) => {
 })
 
 And('I should see login {string}', (status) => {
-  if (status == true) {
+  if (status == 'fail') {
     cy.get('[data-test="error"]').should('be.visible')
   }
 })
