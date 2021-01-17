@@ -9,4 +9,4 @@ workflows:
     jobs:
       - cypress/run:
           yarn: true
-          parallel: false
+          parallel: true
