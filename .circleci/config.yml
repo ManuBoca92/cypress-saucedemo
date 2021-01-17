@@ -13,4 +13,4 @@ workflows:
           start: yarn start:ci
           parallel: true
           parallelism: 2
-          ci-build-d: ${CIRCLE_SHA1:0:8}
+          ci-build-id: ${CIRCLE_SHA1:0:8}
