@@ -7,7 +7,8 @@
     "test": "npx cypress run",
     "open": "cypress open",
     "lint": "eslint ./**/*.js",
-    "lint-cypress": "eslint --fix . && echo 'Lint complete.'"
+    "lint-cypress": "eslint --fix . && echo 'Lint complete.'",
+    "start:ci": "npx cypress run --key 087bdb79-a50a-49a3-a335-5a658362a318"
   },
   "repository": {
     "type": "git",

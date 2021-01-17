@@ -43,6 +43,4 @@ Cypress.Commands.add('addProductToCart', () => {
   InventoryPage.shoppingCartBadge.should('exist').and('be.visible')
   InventoryPage.clickShoppingCartButton()
   cy.url().should('include', '/cart.html')
-  // check product is in shopping cart.
-  cy.get('div[class="cart_item"]').should('exist')
 })
