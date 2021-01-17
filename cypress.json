@@ -2,5 +2,6 @@
   "baseUrl": "https://www.saucedemo.com",
   "viewportWidth": 1500,
   "viewportHeight": 1200,
-  "testFiles": "**/*.feature"
+  "testFiles": "**/*.feature",
+  "projectId": "nwov8d"
 }
