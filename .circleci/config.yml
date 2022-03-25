@@ -8,6 +8,5 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          browser: chrome
           yarn: true
           store_artifacts: true
