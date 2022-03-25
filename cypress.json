@@ -3,5 +3,6 @@
   "viewportWidth": 1500,
   "viewportHeight": 1200,
   "testFiles": "**/*.feature",
-  "projectId": "nwov8d"
+  "projectId": "nwov8d",
+  "chromeWebSecurity": false
 }

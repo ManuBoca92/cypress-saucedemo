@@ -2,7 +2,7 @@ import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
 import LoginPage from '../../pageObjects/LoginPage'
 
 Given('I open cypress saucedemo login page', () => {
-  cy.visit('/index.html')
+  cy.visit('/')
 })
 
 When('I enter in {string} and {string}', (username, password) => {
