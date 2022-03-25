@@ -10,6 +10,3 @@ workflows:
       - cypress/run:
           browser: chrome
           yarn: true
-          # start: yarn start:ci
-          parallel: true
-          parallelism: 2
