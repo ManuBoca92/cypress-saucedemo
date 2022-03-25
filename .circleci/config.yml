@@ -10,7 +10,6 @@ workflows:
       - cypress/run:
           browser: chrome
           yarn: true
-          start: yarn start:ci
+          # start: yarn start:ci
           parallel: true
           parallelism: 2
-          ci-build-id: ${CIRCLE_SHA1:0:8}
