@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 import LoginPage from '../pageObjects/LoginPage'
-const userData = require('../fixtures/user.json')
+import userData from '../fixtures/user.json'
 
 describe('User login tests', function () {
   beforeEach('Visits saucedemo website.', function () {
-    cy.visit('/index.html')
+    cy.visit('/')
   })
   userData.forEach((data) => {
     it(`Login with ${data.credential}`, function () {

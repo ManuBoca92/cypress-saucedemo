@@ -5,7 +5,7 @@ Feature: Login functionality
   Background: User visits login page
     Given I open cypress saucedemo login page
 
-  Scenario Outline: Login by user
+  Scenario Outline: Login by user "<username>"
     When I enter in "<username>" and "<password>"
     And I click on login button
     Then I should be redirected to the correct "<url>" page
